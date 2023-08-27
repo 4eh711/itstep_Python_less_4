@@ -1,18 +1,14 @@
-class GrandParent:
-    def about(self):
-        print("I am GrandParent")
+class Computer:
+    def calculate(self):
+        print("Calculating...")
 
-    def about_myself(self):
-        print("I am GrandParent")
+class Display:
+    def display(self):
+        print("I display the image on the screen")
 
-class Parent(GrandParent):
-    def about_myself(self):
-        print("I am Parent")
+class SmartPhone(Computer,Display):
+    pass
 
-class Child(Parent):
-    def __init__(self):
-        super().about()
-        super().about_myself()
-
-nick =Child()
-
+iphone = SmartPhone()
+iphone.calculate()
+iphone.display()
