@@ -1,14 +1,15 @@
 class Computer:
-    def calculate(self):
-        print("Calculating...")
+    def __init__(self):
+        self.memory=128
 
 class Display:
-    def display(self):
-        print("I display the image on the screen")
+    def __init__(self):
+        self.resolution="4k"
 
-class SmartPhone(Computer,Display):
-    pass
+class SmartPhone(Display, Computer):
+    def print_info(self):
+        print(self.resolution)
+        print(self.memory)
 
 iphone = SmartPhone()
-iphone.calculate()
-iphone.display()
+iphone.print_info()
