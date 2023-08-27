@@ -1,10 +1,13 @@
-class Hello:
+class Class1:
+    var = 20
     def __init__(self):
-        print("Hello!")
+        self.var=10
 
-class Hello_World(Hello):
+class Class2(Class1):
     def __init__(self):
+        print(self.var)
         super().__init__()
-        print("World!")
+        print(self.var)
+        print(super().var)
 
-hello_world=Hello_World()
+hello_world=Class2()
