@@ -1,12 +1,13 @@
 class Human:
     height = 170
+    satiety=50
 
 class Student(Human):
-     pass
+     satiety=0
 class Worker(Human):
-    pass
+    satiety=100
 
 nick=Student()
 ann=Worker()
-print(nick.height)
-print(ann.height)
+print(nick.satiety)
+print(ann.satiety)
