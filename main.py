@@ -1,13 +1,18 @@
-class Class1:
-    var = 20
-    def __init__(self):
-        self.var=10
+class GrandParent:
+    def about(self):
+        print("I am GrandParent")
 
-class Class2(Class1):
-    def __init__(self):
-        print(self.var)
-        super().__init__()
-        print(self.var)
-        print(super().var)
+    def about_myself(self):
+        print("I am GrandParent")
 
-hello_world=Class2()
+class Parent(GrandParent):
+    def about_myself(self):
+        print("I am Parent")
+
+class Child(Parent):
+    def __init__(self):
+        super().about()
+        super().about_myself()
+
+nick =Child()
+
